@@ -1,0 +1,26 @@
+﻿@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.card {
+    border:
+        1px solid
+        $border-color;
+
+    padding: $card-padding;
+
+    background: $white;
+
+    border-radius: $border-radius;
+
+    @include box-shadow;
+
+    h2 {
+        margin-top: 0;
+
+        color: $primary-color;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+}
