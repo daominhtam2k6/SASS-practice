@@ -1,0 +1,24 @@
+﻿@use "../abstracts/variables" as *;
+
+h1,
+h2,
+h3 {
+    color: $secondary-color;
+}
+
+h1 {
+    font-size: 56px;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 38px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+p {
+    color: $text-color;
+}

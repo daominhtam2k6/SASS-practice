@@ -1,0 +1,88 @@
+﻿@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.products {
+    padding: $section-padding;
+
+    background: $background-light;
+
+    .section-heading {
+        @include section-title;
+
+        margin-bottom: 45px;
+    }
+
+    .product-grid {
+        @include container;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 25px;
+    }
+
+    .product-card {
+        @include card;
+
+        overflow: hidden;
+
+        .product-image {
+            height: 220px;
+
+            @include flex-center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #dbeafe,
+                    #bfdbfe
+                );
+
+            color: $primary-color;
+
+            font-size: 24px;
+
+            font-weight: bold;
+        }
+
+        .product-content {
+            padding: 25px;
+
+            h3 {
+                margin-bottom: 10px;
+            }
+
+            p {
+                color: $muted-color;
+                margin-bottom: 18px;
+            }
+
+            .product-price {
+                color: $primary-color;
+
+                font-size: 21px;
+
+                font-weight: bold;
+            }
+        }
+    }
+
+    @include tablet {
+
+        .product-grid {
+            grid-template-columns:
+                repeat(2, 1fr);
+        }
+
+    }
+
+    @include mobile {
+
+        .product-grid {
+            grid-template-columns: 1fr;
+        }
+
+    }
+}

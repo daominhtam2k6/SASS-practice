@@ -1,0 +1,86 @@
+﻿@use "variables" as *;
+
+@mixin container {
+    width: min($container-width, 90%);
+    margin: 0 auto;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin button($background: $primary-color) {
+    display: inline-block;
+
+    background: $background;
+    color: $white;
+
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: $border-radius-small;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform $transition-default,
+        background-color $transition-default;
+
+    &:hover {
+        transform: translateY(-2px);
+        background: $primary-dark;
+    }
+}
+
+@mixin card {
+    background: $white;
+
+    border:
+        1px solid
+        $border-color;
+
+    border-radius: $border-radius-medium;
+
+    box-shadow: $shadow-card;
+
+    transition:
+        transform $transition-default,
+        box-shadow $transition-default;
+
+    &:hover {
+        transform: translateY(-7px);
+        box-shadow: $shadow-card-hover;
+    }
+}
+
+@mixin section-title {
+    text-align: center;
+
+    h2 {
+        font-size: 38px;
+        color: $secondary-color;
+        margin-bottom: 12px;
+    }
+
+    p {
+        color: $muted-color;
+        font-size: 17px;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 700px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 950px) {
+        @content;
+    }
+}

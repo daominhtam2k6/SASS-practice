@@ -1,0 +1,58 @@
+﻿@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.statistics {
+    padding: $section-padding;
+
+    background: $secondary-color;
+
+    color: $white;
+
+    .statistics-grid {
+        @include container;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(4, 1fr);
+
+        gap: 30px;
+    }
+
+    .stat-item {
+        text-align: center;
+
+        .number {
+            display: block;
+
+            color: $white;
+
+            font-size: 42px;
+
+            font-weight: bold;
+
+            margin-bottom: 7px;
+        }
+
+        .label {
+            color: #cbd5e1;
+        }
+    }
+
+    @include tablet {
+
+        .statistics-grid {
+            grid-template-columns:
+                repeat(2, 1fr);
+        }
+
+    }
+
+    @include mobile {
+
+        .statistics-grid {
+            grid-template-columns: 1fr;
+        }
+
+    }
+}

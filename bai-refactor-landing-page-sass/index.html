@@ -1,0 +1,421 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Landing Page Refactored with SASS
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/main.css">
+
+</head>
+
+<body>
+
+    <!-- ==================================================
+         NAVIGATION
+    =================================================== -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a
+                href="#home"
+                class="logo">
+
+                MyLanding
+
+            </a>
+
+            <ul class="nav-menu">
+
+                <li>
+                    <a href="#home">
+                        Trang chủ
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#products">
+                        Sản phẩm
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#statistics">
+                        Thống kê
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#footer">
+                        Liên hệ
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <!-- ==================================================
+         HEADER / HERO
+    =================================================== -->
+
+    <header
+        class="hero"
+        id="home">
+
+        <div class="hero-container">
+
+            <div class="hero-text">
+
+                <p class="tag">
+                    LANDING PAGE
+                </p>
+
+                <h1>
+                    Giải pháp hiện đại
+                    cho trải nghiệm số
+                </h1>
+
+                <p class="description">
+
+                    Landing Page được tái cấu trúc CSS
+                    sang SASS bằng Variables, Mixins,
+                    Nesting và Partials.
+
+                </p>
+
+                <a
+                    href="#products"
+                    class="btn">
+
+                    Khám phá sản phẩm
+
+                </a>
+
+            </div>
+
+            <div class="hero-image">
+
+                LANDING PAGE
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ==================================================
+         FEATURED PRODUCTS
+    =================================================== -->
+
+    <section
+        class="products"
+        id="products">
+
+        <div class="section-heading">
+
+            <h2>
+                Sản phẩm nổi bật
+            </h2>
+
+            <p>
+                Những sản phẩm được lựa chọn nổi bật.
+            </p>
+
+        </div>
+
+        <div class="product-grid">
+
+            <article class="product-card">
+
+                <div class="product-image">
+                    PRODUCT 01
+                </div>
+
+                <div class="product-content">
+
+                    <h3>
+                        Premium Product
+                    </h3>
+
+                    <p>
+
+                        Thiết kế hiện đại,
+                        đơn giản và dễ sử dụng.
+
+                    </p>
+
+                    <span class="product-price">
+                        $99
+                    </span>
+
+                </div>
+
+            </article>
+
+            <article class="product-card">
+
+                <div class="product-image">
+                    PRODUCT 02
+                </div>
+
+                <div class="product-content">
+
+                    <h3>
+                        Creative Product
+                    </h3>
+
+                    <p>
+
+                        Sản phẩm phù hợp với
+                        nhiều nhu cầu khác nhau.
+
+                    </p>
+
+                    <span class="product-price">
+                        $129
+                    </span>
+
+                </div>
+
+            </article>
+
+            <article class="product-card">
+
+                <div class="product-image">
+                    PRODUCT 03
+                </div>
+
+                <div class="product-content">
+
+                    <h3>
+                        Business Product
+                    </h3>
+
+                    <p>
+
+                        Giải pháp chuyên nghiệp
+                        cho doanh nghiệp hiện đại.
+
+                    </p>
+
+                    <span class="product-price">
+                        $149
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- ==================================================
+         STATISTICS
+    =================================================== -->
+
+    <section
+        class="statistics"
+        id="statistics">
+
+        <div class="statistics-grid">
+
+            <div class="stat-item">
+
+                <span class="number">
+                    10K+
+                </span>
+
+                <span class="label">
+                    Khách hàng
+                </span>
+
+            </div>
+
+            <div class="stat-item">
+
+                <span class="number">
+                    250+
+                </span>
+
+                <span class="label">
+                    Dự án
+                </span>
+
+            </div>
+
+            <div class="stat-item">
+
+                <span class="number">
+                    98%
+                </span>
+
+                <span class="label">
+                    Hài lòng
+                </span>
+
+            </div>
+
+            <div class="stat-item">
+
+                <span class="number">
+                    24/7
+                </span>
+
+                <span class="label">
+                    Hỗ trợ
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==================================================
+         FOOTER
+    =================================================== -->
+
+    <footer
+        class="footer"
+        id="footer">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h3>
+                    MyLanding
+                </h3>
+
+                <p>
+
+                    Landing Page được tái cấu trúc
+                    bằng SASS để code dễ bảo trì,
+                    tái sử dụng và mở rộng hơn.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>
+                    Sản phẩm
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#">
+                            Product 01
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Product 02
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Product 03
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h3>
+                    Công ty
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#">
+                            Giới thiệu
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Blog
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Tuyển dụng
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h3>
+                    Liên hệ
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#">
+                            Facebook
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            LinkedIn
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Email
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+
+            <p>
+                © 2026 MyLanding.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
