@@ -1,0 +1,34 @@
+﻿@use "variables" as *;
+
+@mixin button-style($bg-color) {
+    background: $bg-color;
+    color: $white;
+
+    padding: $padding-standard;
+
+    border: none;
+    border-radius: $button-radius;
+
+    cursor: pointer;
+
+    transition:
+        opacity 0.3s,
+        transform 0.3s;
+
+    &:hover {
+        opacity: 0.85;
+
+        transform:
+            translateY(-2px);
+    }
+}
+
+@mixin box-style {
+    background: $white;
+
+    padding: $card-padding;
+
+    border-radius: $card-radius;
+
+    box-shadow: $box-shadow-default;
+}
