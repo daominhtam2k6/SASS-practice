@@ -1,0 +1,17 @@
+.alert-success {
+  background-color: #198754;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #198754;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+/*# sourceMappingURL=components.css.map */

@@ -1,0 +1,24 @@
+﻿$success: #198754;
+$white: #ffffff;
+
+.alert-success {
+    background-color: $success;
+    color: $white;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+}
+
+.badge {
+    display: inline-block;
+
+    background-color: $success;
+    color: $white;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+}

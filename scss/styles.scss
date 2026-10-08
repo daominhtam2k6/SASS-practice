@@ -1,0 +1,102 @@
+﻿@use "variables" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: $light-color;
+    color: $text-color;
+}
+
+.header {
+    background-color: $primary-color;
+    color: $white;
+    padding: 50px 20px;
+    text-align: center;
+
+    h1 {
+        margin-bottom: 10px;
+        font-size: 42px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: 50px auto;
+}
+
+.card-container {
+    display: flex;
+    gap: $spacing;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1 1 280px;
+
+    background-color: $white;
+
+    padding: $spacing;
+
+    border-radius: $border-radius;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+
+    h2 {
+        color: $primary-color;
+        margin-bottom: 10px;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    &:hover {
+        transform: translateY(-6px);
+
+        box-shadow:
+            0 14px 30px
+            rgba(0, 0, 0, 0.14);
+    }
+}
+
+.button {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 12px 22px;
+
+    background-color: $primary-color;
+    color: $white;
+
+    text-decoration: none;
+
+    border-radius: $border-radius;
+
+    &:hover {
+        opacity: 0.85;
+    }
+}
+
+.footer {
+    background-color: $secondary-color;
+    color: $white;
+
+    padding: 25px;
+
+    text-align: center;
+}
