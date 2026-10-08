@@ -1,0 +1,53 @@
+﻿@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.grid-container {
+    width: 100%;
+}
+
+.grid-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+}
+
+.grid-column {
+    @include grid-column;
+
+    background: $light-grey;
+
+    border-right:
+        1px solid
+        grey;
+}
+
+.grid-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat($columns, 1fr);
+
+    opacity: 0.1;
+
+    pointer-events: none;
+
+    .column {
+        border-left:
+            1px solid
+            $grid-border;
+    }
+
+    .column:last-child {
+        border-right:
+            1px solid
+            $grid-border;
+    }
+}

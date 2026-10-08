@@ -1,0 +1,112 @@
+﻿@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.demo {
+    position: relative;
+
+    margin:
+        20px
+        10px;
+}
+
+/* HEADER */
+
+.demo-header {
+    @include full-width-block(
+        $header-height,
+        $purple
+    );
+}
+
+/* CONTENT */
+
+.demo-content {
+    min-height: $content-height;
+
+    display: flex;
+
+    background: $white;
+}
+
+/* LEFT MENU */
+
+.menu {
+    width: $menu-width;
+
+    padding-top: 15px;
+
+    background: $white;
+
+    @include responsive-stack;
+
+    .menu-item {
+        width: 100%;
+        height: 35px;
+
+        margin-bottom: $spacing;
+
+        background: $blue;
+    }
+}
+
+/* CENTER AREA */
+
+.main-content {
+    width: 50%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    @include responsive-stack;
+
+    .grid-cell {
+        min-height: $content-height;
+
+        background: $white;
+    }
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    width: $sidebar-width;
+
+    padding-top: 15px;
+
+    background: $white;
+
+    @include responsive-stack;
+
+    .sidebar-box {
+        width: 100%;
+        height: 200px;
+
+        background: $blue;
+    }
+}
+
+/* FOOTER */
+
+.demo-footer {
+    @include full-width-block(
+        $footer-height,
+        $footer-blue
+    );
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .demo-content {
+        flex-direction: column;
+    }
+
+    .main-content {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
